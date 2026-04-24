@@ -116,6 +116,25 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+This project is deployed on Vercel.
+
+Live URL:
+1. Add your deployed URL here after each production deploy.
+2. Example format: `https://your-project-name.vercel.app`
+
+Vercel project settings:
+1. Framework Preset: `Vite`
+2. Root Directory: `./`
+3. Build Command: `npm run build`
+4. Output Directory: `dist`
+
+Deployment notes:
+1. Removed direct dependency on `@rolldown/binding-win32-x64-msvc` because it is Windows-only and fails on Vercel Linux build environments.
+2. Keep Node.js version compatible with Vite 8 (`20.19+` or `22.12+`).
+3. Redeploy from Vercel after pushing to `main`.
+
 ## Design Decisions
 
 1. Zustand for shared workflow state:
