@@ -18,6 +18,7 @@ body,
   height: 100%;
   display: grid;
   grid-template-columns: 220px 1fr 280px;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -70,6 +71,7 @@ body,
 .canvas-area {
   width: 100%;
   height: 100%;
+  min-width: 0;
 }
 
 .inspector-column {
@@ -77,6 +79,7 @@ body,
   background: #fcfcfd;
   display: grid;
   grid-template-rows: 1fr auto;
+  min-width: 0;
 }
 
 .node-form-panel {
@@ -356,6 +359,113 @@ body,
   cursor: pointer;
   display: grid;
   place-items: center;
+}
+
+@media (max-width: 1100px) {
+  .workflow-layout {
+    grid-template-columns: 200px 1fr 260px;
+  }
+}
+
+@media (max-width: 900px) {
+  .workflow-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(320px, 1fr) auto;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 8px;
+  }
+
+  .sidebar-legend {
+    margin-bottom: 8px;
+  }
+
+  .sidebar-history-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 10px;
+  }
+
+  .sidebar-buttons {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .sidebar-buttons button {
+    width: auto;
+    min-width: 120px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .canvas-area {
+    min-height: 45vh;
+  }
+
+  .inspector-column {
+    border-left: none;
+    border-top: 1px solid #e5e7eb;
+    grid-template-rows: auto auto;
+  }
+
+  .node-form-panel,
+  .simulation-panel {
+    padding: 12px;
+  }
+
+  .simulation-json {
+    max-height: 140px;
+  }
+}
+
+@media (max-width: 520px) {
+  .sidebar {
+    padding: 10px;
+  }
+
+  .sidebar button,
+  .simulate-button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .node-form-grid {
+    gap: 10px;
+  }
+
+  .node-form-grid label {
+    font-size: 11px;
+  }
+
+  .node-form-grid input,
+  .node-form-grid select,
+  .node-form-grid textarea {
+    font-size: 13px;
+  }
+
+  .simulation-timeline {
+    gap: 6px;
+    padding-left: 16px;
+  }
+
+  .simulation-timeline-title {
+    font-size: 12px;
+  }
+
+  .simulation-timeline-meta,
+  .simulation-timeline-message {
+    font-size: 11px;
+  }
 }
 
 .edge-delete-button:hover {
