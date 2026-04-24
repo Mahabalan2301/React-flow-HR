@@ -121,8 +121,8 @@ npm run preview
 This project is deployed on Vercel.
 
 Live URL:
-1. Add your deployed URL here after each production deploy.
-2. Example format: `https://react-flow-hr-owqq.vercel.app/`
+
+ https://react-flow-hr-owqq.vercel.app/
 
 Vercel project settings:
 1. Framework Preset: `Vite`
