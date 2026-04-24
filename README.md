@@ -122,7 +122,7 @@ This project is deployed on Vercel.
 
 Live URL:
 1. Add your deployed URL here after each production deploy.
-2. Example format: `https://your-project-name.vercel.app`
+2. Example format: `https://react-flow-hr-owqq.vercel.app/`
 
 Vercel project settings:
 1. Framework Preset: `Vite`
